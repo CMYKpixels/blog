@@ -10,6 +10,14 @@
 
   <body>
     <div class="flash small text-center"><%= flash.notice %></div>
+
+    <% if notice %>
+      <p class="alert alert-success small text-center"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger small text-center"><%= alert %></p>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="container">
+    <h3>
+      Post a Comment
+      <small>
+        there is <%= @article.comments.size %> comments
+      </small>
+    </h3>
+    <%= form_for [ @article, @comment ] do |f| %>
+      <p>
+        <%= f.label :author_name, "Your Name:" %><br>
+        <%= f.text_field :author_name %>
+      </p>
+      <p>
+        <%= f.label :body, "Your Comment:" %><br>
+        <%= f.text_area :body %>
+      </p>
+      <p>
+        <%= f.submit 'Submit', class: "btn btn-success" %>
+      </p>
+      <% end %>
+  </div>
+</div>
